@@ -76,6 +76,10 @@ set -x
 #
 # Update the machine
 #
+
+# clean YUM repo's
+/usr/bin/yum clean all --enablerepo=*
+
 /usr/bin/yum update -y --skip-broken || :
 
 #
